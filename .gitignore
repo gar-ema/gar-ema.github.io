@@ -10,4 +10,6 @@ node_modules
 _config.yml
 _site/*
 *Thumbs.db
-Gemfile.lock
+
+vendor/
+.bundle/
