@@ -5,7 +5,6 @@ tags:
     - Windows Phone
 categories:
     - announcement
-    - archive
 permalink: /2012/06/21/new-windows-phone-start-screen
 ---
  

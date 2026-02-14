@@ -6,7 +6,6 @@ tags:
     - Sun-Tsu
 categories:
     - reflections
-    - archive
 permalink: /2017/01/09/Sun-Tsu-e-larte-del-management-1
 ---
 
