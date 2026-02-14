@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
-gem 'jekyll'
+source "https://rubygems.org"
+
+gem "jekyll-theme-chirpy", "~> 7.2"
 
 group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "pygments.rb"
+  gem "html-proofer", "~> 5.0"
 end
