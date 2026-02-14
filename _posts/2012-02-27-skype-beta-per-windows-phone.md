@@ -4,7 +4,6 @@ date: 2012-02-27T03:35:08+00:00
 permalink: /2012/02/27/skype-beta-per-windows-phone/
 categories:
   - announcement
-  - archive
 tags:
   - Beta
   - Release

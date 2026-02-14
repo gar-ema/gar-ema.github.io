@@ -1,0 +1,9 @@
+main:
+  - title: "Categorie"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Archivio"
+    url: /archives/
+  - title: "About"
+    url: /about/

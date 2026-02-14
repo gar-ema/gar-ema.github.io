@@ -1,111 +1,99 @@
-theme: jekyll-theme-chirpy
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 
-lang: it-IT
+minimal_mistakes_skin: "dark"
 
-timezone: Europe/Rome
-
-title: Unhandled Exception
-
-tagline: everyday a developer wakes up and starts coding
-
+locale: "it-IT"
+title: "Unhandled Exception"
+subtitle: "everyday a developer wakes up and starts coding"
+name: "Emanuele Garofalo"
 description: >-
   Blog tecnico di Emanuele Garofalo.
   Articoli su .NET, C#, architettura software e sviluppo.
-
 url: "https://blog.unhandledexception.it"
 
-github:
-  username: gar-ema
-
-twitter:
-  username: emagar83
-
-social:
-  name: Emanuele Garofalo
-  email: ""
+author:
+  name: "Emanuele Garofalo"
+  bio: "Solution Architect & Technology Enthusiast"
+  location: "Italy"
   links:
-    - https://github.com/gar-ema
-    - https://twitter.com/emagar83
-    - https://www.linkedin.com/in/emanuele-garofalo-ba12ab31
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/gar-ema"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/emagar83"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/emanuele-garofalo-ba12ab31"
 
-# Site-wide Open Graph image (optional)
-# img_cdn:
-# avatar: /assets/imgs/avatar.png
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/gar-ema"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/emagar83"
 
-theme_mode: # [light | dark]
+timezone: Europe/Rome
 
-# Self-hosted static assets: no CDN
-# assets:
-#   self_host:
-#     enabled: true
-
-toc: true
-
-comments:
-  provider: giscus
-  giscus:
-    repo: # gar-ema/gar-ema.github.io
-    repo_id:
-    category:
-    category_id:
-    mapping: pathname
-    strict: 0
-    input_position: bottom
-    lang: it
-    reactions_enabled: 1
-
-# Web Analytics
-analytics:
-  google:
-    id: # fill in your Google Analytics ID
-
-pageviews:
-  provider: # goatcounter
+# Build
+markdown: kramdown
+highlighter: rouge
 
 kramdown:
-  footnote_backlink: "&#8617;&#xfe0e;"
+  input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: highlight
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
 
-collections:
-  tabs:
-    output: true
-    sort_by: order
+# Pagination
+paginate: 10
+paginate_path: /page:num/
 
+# Reading
+show_date: true
+date_format: "%d/%m/%Y"
+read_time: true
+words_per_minute: 200
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Defaults
 defaults:
   - scope:
       path: ""
       type: posts
     values:
-      layout: post
+      layout: single
+      author_profile: true
+      read_time: true
       comments: true
+      share: true
+      related: true
+      show_date: true
       toc: true
-      permalink: /posts/:title/
   - scope:
-      path: _tabs
-      type: tabs
+      path: "_pages"
+      type: pages
     values:
-      layout: page
-      permalink: /:title/
+      layout: single
+      author_profile: true
 
-sass:
-  style: compressed
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-remote-theme
 
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
-
+# Exclude
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -115,8 +103,5 @@ exclude:
   - LICENSE
   - "*.config.js"
   - package*.json
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-archives
+  - Gemfile
+  - Gemfile.lock

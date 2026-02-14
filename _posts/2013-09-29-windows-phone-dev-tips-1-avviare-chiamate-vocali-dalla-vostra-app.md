@@ -5,7 +5,6 @@ tags:
     - windows phone
 categories:
     - programming
-    - archive
 permalink: /2013/09/29/windows-phone-dev-tips-1-avviare-chiamate-vocali-dalla-vostra-app
 ---
 Può capitare in alcune applicazioni (es: chat con registrazioni basata su numero telefonico) di voler offrire la possibilità di avviare chiamate vocali dall’app stessa . A tal proposito nel SDK per Windows Phone è presente un task ad-hoc.

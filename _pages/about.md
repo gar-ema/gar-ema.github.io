@@ -1,6 +1,6 @@
 ---
-icon: fas fa-info-circle
-order: 4
+title: "About"
+permalink: /about/
 ---
 
 Sono **Emanuele Garofalo**, Solution Architect e appassionato di tecnologia.

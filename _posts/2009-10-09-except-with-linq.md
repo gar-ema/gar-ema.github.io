@@ -8,7 +8,6 @@ tags:
 categories:
     - programming
     - .net
-    - archive
 permalink: /2009/10/09/except-with-linq
 ---
 
