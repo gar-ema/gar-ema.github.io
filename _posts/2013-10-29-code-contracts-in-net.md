@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Code Contracts in .Net
 date: 2013-10-29 12:10:00
 tags:

@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Enterprise Library 5!!
 date: 2010-05-18T02:02:56+00:00
 permalink: /2010/05/18/enterprise-library-5/

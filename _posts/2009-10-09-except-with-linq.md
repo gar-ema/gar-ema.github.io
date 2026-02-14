@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Except with linq
 date: 2009-10-09 21:10:13
 tags:

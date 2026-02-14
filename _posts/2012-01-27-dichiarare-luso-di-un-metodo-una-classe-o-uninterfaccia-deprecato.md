@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Dichiarare l'uso di un metodo (una classe o un'interfaccia…) deprecato
 date: 2012-01-27T06:34:51+00:00
 permalink: /2012/01/27/dichiarare-luso-di-un-metodo-una-classe-o-uninterfaccia-deprecato/

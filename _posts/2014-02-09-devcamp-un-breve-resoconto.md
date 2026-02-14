@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: DevCamp un breve resoconto
 date: 2014-02-09 11:02:54
 tags:

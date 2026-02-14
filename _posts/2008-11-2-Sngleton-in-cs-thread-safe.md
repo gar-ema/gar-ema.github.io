@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Singleton in C# thread-safe
 date: 2009-11-02 15:47:13
 tags:

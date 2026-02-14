@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: DataContractSerializer Vs XmlSerializer
 date: 2010-07-06 01:07:04
 tags:
