@@ -1,62 +1,120 @@
-title:               "Unhandled Exception"
-description:        "everyday a developer wakes up and starts coding"
+theme: jekyll-theme-chirpy
 
+lang: it-IT
 
-author:
-  name: nezumi
-  #email: 
-  github: nezumi-quasar
-  twitter: emagar83
-  #pinterest: asd123
-  linkedin: emanuele-garofalo-ba12ab31
-  #bio: Your stylish, minimalist theme!
-  email_md5: 082fcf499b13603f2d604b0afaf7f89d
+timezone: Europe/Rome
 
-gravatar_hash:      "082fcf499b13603f2d604b0afaf7f89d"
-linkedin_url:       "https://bit.ly/2e8dXx8"
-disqus:   ""
-#google_analytics:   not configured
-background:         "/assets/imgs/deserve_bg.jpg"
-resources:          "resources"
+title: Unhandled Exception
 
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
+tagline: everyday a developer wakes up and starts coding
+
+description: >-
+  Blog tecnico di Emanuele Garofalo, Microsoft MVP.
+  Articoli su .NET, C#, architettura software e sviluppo.
 
 url: "https://blog.unhandledexception.it"
-BASE_PATH: https://blog.unhandledexception.it
 
-paginate:           10
-paginate_path:      "/page:num/"
+github:
+  username: gar-ema
 
-highlighter:        rouge
-markdown:           kramdown
+twitter:
+  username: emagar83
 
-nav:
-  - name:           "Slideshares"
-    href:           "/pages/slideshares"
-  - name:           "Bio"
-    href:           "/pages/bio"
-  - name:           "Publications"
-    href:           "/pages/publications"
+social:
+  name: Emanuele Garofalo
+  email: ""
+  links:
+    - https://github.com/gar-ema
+    - https://twitter.com/emagar83
+    - https://www.linkedin.com/in/emanuele-garofalo-ba12ab31
 
-sass:
-  sass_dir: resources/css
-  style:    expanded
+# Site-wide Open Graph image (optional)
+# img_cdn:
+# avatar: /assets/imgs/avatar.png
+
+theme_mode: # [light | dark]
+
+# Self-hosted static assets: no CDN
+# assets:
+#   self_host:
+#     enabled: true
+
+toc: true
+
+comments:
+  provider: giscus
+  giscus:
+    repo: # gar-ema/gar-ema.github.io
+    repo_id:
+    category:
+    category_id:
+    mapping: pathname
+    strict: 0
+    input_position: bottom
+    lang: it
+    reactions_enabled: 1
+
+# Web Analytics
+analytics:
+  google:
+    id: # fill in your Google Analytics ID
+
+pageviews:
+  provider: # goatcounter
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
+  - scope:
+      path: ""
+      type: posts
     values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _tabs
+      type: tabs
     values:
-      layout:       "post"
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - package*.json
 
 plugins:
-  - jekyll-paginate
+  - jekyll-theme-chirpy
