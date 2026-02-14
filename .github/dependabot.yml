@@ -1,0 +1,23 @@
+# Dependabot configuration for automatic dependency updates
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Maintain Ruby gems (Jekyll and plugins)
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Group minor and patch updates to reduce PR noise
+    groups:
+      jekyll-dependencies:
+        patterns:
+          - "*"
+    # Labels to add to pull requests
+    labels:
+      - "dependencies"
+      - "ruby"
+    # Maximum number of open pull requests for version updates
+    open-pull-requests-limit: 5
+    # Allow both direct and indirect dependencies
+    versioning-strategy: "increase"
