@@ -1,3 +1,4 @@
+theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 
 minimal_mistakes_skin: "dark"
@@ -91,7 +92,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-include-cache
-  - jekyll-remote-theme
+
+# Include
+include:
+  - _pages
 
 # Exclude
 exclude:
@@ -105,3 +109,5 @@ exclude:
   - package*.json
   - Gemfile
   - Gemfile.lock
+  - tests
+  - script

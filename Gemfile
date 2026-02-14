@@ -1,13 +1,12 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "minimal-mistakes-jekyll", "~> 4.26"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
-  gem "jekyll-archives"
   gem "jekyll-include-cache"
-  gem "jekyll-remote-theme"
 end
