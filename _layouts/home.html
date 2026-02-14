@@ -4,64 +4,21 @@ layout: default
 
 {% include lang.html %}
 
-{% assign all_pinned = site.posts | where: 'pin', 'true' %}
-{% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+{% assign pinned = '' | split: '' %}
+{% assign normal = '' | split: '' %}
 
-<!-- Filter out archive posts -->
-{% assign filtered_pinned = '' | split: '' %}
-{% for post in all_pinned %}
-  {% unless post.categories contains 'archive' %}
-    {% assign filtered_pinned = filtered_pinned | push: post %}
-  {% endunless %}
-{% endfor %}
-{% assign all_pinned = filtered_pinned %}
-
-{% assign filtered_normal = '' | split: '' %}
-{% for post in all_normal %}
-  {% unless post.categories contains 'archive' %}
-    {% assign filtered_normal = filtered_normal | push: post %}
-  {% endunless %}
-{% endfor %}
-{% assign all_normal = filtered_normal %}
-
-{% assign posts = '' | split: '' %}
-
-<!-- Get pinned posts on current page -->
-
-{% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign visible_end = visible_start | plus: paginator.per_page %}
-
-{% if all_pinned.size > visible_start %}
-  {% if all_pinned.size > visible_end %}
-    {% assign pinned_size = paginator.per_page %}
-  {% else %}
-    {% assign pinned_size = all_pinned.size | minus: visible_start %}
+{% for post in site.posts %}
+  {% if post.categories contains 'archive' %}
+    {% continue %}
   {% endif %}
-
-  {% for i in (visible_start..all_pinned.size) limit: pinned_size %}
-    {% assign posts = posts | push: all_pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_size = 0 %}
-{% endif %}
-
-<!-- Get normal posts on current page -->
-
-{% assign normal_size = paginator.posts | size | minus: pinned_size %}
-
-{% if normal_size > 0 %}
-  {% if pinned_size > 0 %}
-    {% assign normal_start = 0 %}
-  {% else %}
-    {% assign normal_start = visible_start | minus: all_pinned.size %}
+  {% if post.pin %}
+    {% assign pinned = pinned | push: post %}
+  {% elsif post.hidden != true %}
+    {% assign normal = normal | push: post %}
   {% endif %}
+{% endfor %}
 
-  {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
-
-  {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
-  {% endfor %}
-{% endif %}
+{% assign posts = pinned | concat: normal %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
@@ -152,6 +109,8 @@ layout: default
 </div>
 <!-- #post-list -->
 
-{% if paginator.total_pages > 1 %}
-  {% include post-paginator.html %}
+{% if posts.size == 0 %}
+  <div class="text-center mt-5">
+    <p class="lead text-muted">Nessun articolo ancora. Resta sintonizzato!</p>
+  </div>
 {% endif %}
