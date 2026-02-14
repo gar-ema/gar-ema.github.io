@@ -11,6 +11,7 @@ categories:
     - .net
     - c#
     - programming
+    - archive
 permalink: /2013/10/29/code-contracts-in-net
 ---
 

@@ -4,6 +4,7 @@ date: 2010-05-11T08:22:13+00:00
 permalink: /2010/05/11/un-pc-con-fino-a-25-mouse/
 categories:
   - announcement
+  - archive
 tags:
   - MultiPoint Mouse
   - Release

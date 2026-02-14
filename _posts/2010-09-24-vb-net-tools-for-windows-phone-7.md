@@ -4,6 +4,7 @@ date: 2010-09-24T02:30:44+00:00
 permalink: /2010/09/24/vb-net-tools-for-windows-phone-7/
 categories:
   - announcement
+  - archive
 tags:
   - VM
   - windows phone

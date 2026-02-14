@@ -4,6 +4,7 @@ date: 2012-01-27T06:34:51+00:00
 permalink: /2012/01/27/dichiarare-luso-di-un-metodo-una-classe-o-uninterfaccia-deprecato/
 categories:
   - programming
+  - archive
 ---
 
   Non so se vi è mai capitato, ma nel caso spero possa esservi utile, di dover dichiarare che non è più consigliato l’utilizzo di una vostra classe o di un vostro metodo a seguito di modifiche al progetto. Qualsiasi sia il vostro caso vi basta decorare il vostro metodo o un’interfaccia o una classe) e decorarla con l’attributo <strong>Obsolete </strong> 

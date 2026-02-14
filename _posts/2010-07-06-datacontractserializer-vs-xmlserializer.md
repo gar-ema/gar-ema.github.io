@@ -6,6 +6,7 @@ tags:
     - Serialization
 categories:
     - programming
+    - archive
 permalink: /2010/07/06/datacontractserializer-vs-xmlserializer
 ---
 Serializzatore...quale scegliere e perché? 

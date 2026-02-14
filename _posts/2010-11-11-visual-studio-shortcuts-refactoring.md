@@ -4,6 +4,7 @@ date: 2010-11-11T04:47:54+00:00
 permalink: /2010/11/11/visual-studio-shortcuts-refactoring/
 categories:
   - Uncategorized
+  - archive
 tags:
   - Shortcuts
   - Tips

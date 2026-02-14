@@ -6,6 +6,7 @@ tags:
 categories:
     - NOTEch
     - reflections
+    - archive
 permalink: /2018/07/27/Un-Anno-Da-Freelance-Retrospettiva
 ---
 

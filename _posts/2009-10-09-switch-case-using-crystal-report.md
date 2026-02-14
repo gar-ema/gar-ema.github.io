@@ -5,6 +5,7 @@ tags:
     - Crystal report
 categories:
     - programming
+    - archive
 permalink: /2009/10/09/switch-case-using-crystal-report
 ---
 
