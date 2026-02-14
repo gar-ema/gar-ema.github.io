@@ -1,8 +1,6 @@
 ---
 title: Google…cosa tireranno fuori domani
 date: 2010-05-26T01:22:41+00:00
-author: Emanuele
-layout: post
 permalink: /2010/05/26/googlecosa-tireranno-fuori-domani/
 categories:
   - announcement

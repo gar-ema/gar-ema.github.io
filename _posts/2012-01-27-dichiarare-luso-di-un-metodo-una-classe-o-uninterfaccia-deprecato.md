@@ -1,13 +1,7 @@
 ---
-id: 66
-title: Dichiarare l’uso di un metodo (una classe o un’interfaccia…) deprecato
+title: Dichiarare l'uso di un metodo (una classe o un'interfaccia…) deprecato
 date: 2012-01-27T06:34:51+00:00
-author: Emanuele
-layout: post
-guid: https://nezwork.wordpress.com/?p=66
 permalink: /2012/01/27/dichiarare-luso-di-un-metodo-una-classe-o-uninterfaccia-deprecato/
-geo_public:
-  - "0"
 categories:
   - programming
 ---

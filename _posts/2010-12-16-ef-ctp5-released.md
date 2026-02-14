@@ -1,8 +1,6 @@
 ---
 title: EF CTP5 released!!!
 date: 2010-12-16T12:19:27+00:00
-author: Emanuele
-layout: post
 permalink: /2010/12/16/ef-ctp5-released/
 categories:
   - announcement

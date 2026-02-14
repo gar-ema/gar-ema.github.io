@@ -1,9 +1,6 @@
 ---
 title: VB.Net Tools for Windows Phone 7
 date: 2010-09-24T02:30:44+00:00
-author: emanueleg
-layout: post
-guid: https://nezwork.wordpress.com/?p=56
 permalink: /2010/09/24/vb-net-tools-for-windows-phone-7/
 categories:
   - announcement

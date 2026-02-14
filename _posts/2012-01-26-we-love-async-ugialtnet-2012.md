@@ -1,9 +1,6 @@
 ---
 title: We Love Async–UgiAltNet 2012
 date: 2012-01-26T11:38:50+00:00
-author: Emanuele
-layout: post
-guid: https://nezwork.wordpress.com/?p=64
 permalink: /2012/01/26/we-love-async-ugialtnet-2012/
 categories:
   - events

@@ -1,8 +1,6 @@
 ---
 title: 'Technology Preview: Windows Phone e Kinect per XBox 360'
 date: 2012-02-16T04:55:14+00:00
-author: emanueleg
-layout: post
 permalink: /2012/02/16/technology-preview-windows-phone-e-kinect-per-xbox-360/
 categories:
   - announcement
