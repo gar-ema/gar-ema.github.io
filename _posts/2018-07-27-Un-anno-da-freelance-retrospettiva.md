@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Un anno da freelance - Retrospettiva
 date: 2018-07-27 11:25:13
 tags:

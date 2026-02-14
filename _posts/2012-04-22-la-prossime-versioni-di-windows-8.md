@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: La prossime versioni di Windows 8…
 date: 2012-04-22 12:04:00
 tags:

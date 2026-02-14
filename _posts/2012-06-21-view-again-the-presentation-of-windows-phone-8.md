@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: View again the presentation of Windows Phone 8
 date: 2012-06-21 11:06:08
 tags:

@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: Switch case using Crystal Report
 date: 2009-10-09 11:25:13
 tags:

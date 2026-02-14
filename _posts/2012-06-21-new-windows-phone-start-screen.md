@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: New Windows Phone Start Screen
 date: 2012-06-21 10:06:54
 tags:
