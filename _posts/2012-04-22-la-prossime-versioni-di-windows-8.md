@@ -5,6 +5,7 @@ tags:
     - Windows 8
 categories:
     - announcement
+    - archive
 permalink: /2012/04/22/la-prossime-versioni-di-windows-8
 ---
 Ebbene, giorni fa il team di Windows ha pubblicato un blogpost in cui fanno chiarezza sulle differenze tra le tre versioni principali in cui sarà distribuita la prossima versione Windows.
