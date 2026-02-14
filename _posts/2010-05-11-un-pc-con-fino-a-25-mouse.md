@@ -1,8 +1,6 @@
 ---
 title: Un pc con (fino a) 25 mouse
 date: 2010-05-11T08:22:13+00:00
-author: Emanueleg
-layout: post
 permalink: /2010/05/11/un-pc-con-fino-a-25-mouse/
 categories:
   - announcement

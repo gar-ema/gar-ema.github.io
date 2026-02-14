@@ -1,9 +1,5 @@
 ---
-layout: post
 title: New Windows Phone Start Screen
-published: true
-author: nezumimc
-comments: true
 date: 2012-06-21 10:06:54
 tags:
     - Windows Phone

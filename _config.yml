@@ -9,7 +9,7 @@ title: Unhandled Exception
 tagline: everyday a developer wakes up and starts coding
 
 description: >-
-  Blog tecnico di Emanuele Garofalo, Microsoft MVP.
+  Blog tecnico di Emanuele Garofalo.
   Articoli su .NET, C#, architettura software e sviluppo.
 
 url: "https://blog.unhandledexception.it"
@@ -117,4 +117,6 @@ exclude:
   - package*.json
 
 plugins:
-  - jekyll-theme-chirpy
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives

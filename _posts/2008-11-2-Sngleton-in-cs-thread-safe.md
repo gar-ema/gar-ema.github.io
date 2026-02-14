@@ -1,9 +1,5 @@
 ---
-layout: post
 title: Singleton in C# thread-safe
-published: true
-author: emanueleg
-comments: true
 date: 2009-11-02 15:47:13
 tags:
     - pattern
@@ -15,7 +11,6 @@ categories:
     - programming
     - .net
 permalink: /2009/11/02/except-with-linq
-language: en
 ---
 
 <a target="_blank" href="{{ site.url }}/assets/imgs/posts/7444.singleton_78195B3B.jpg">

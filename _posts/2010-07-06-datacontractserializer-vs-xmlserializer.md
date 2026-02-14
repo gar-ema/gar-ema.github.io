@@ -1,9 +1,5 @@
 ---
-layout: post
 title: DataContractSerializer Vs XmlSerializer
-published: true
-author: Emanuele
-comments: true
 date: 2010-07-06 01:07:04
 tags:
     - .net

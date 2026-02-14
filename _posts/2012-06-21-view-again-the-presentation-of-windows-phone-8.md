@@ -1,12 +1,7 @@
 ---
-layout: post
 title: View again the presentation of Windows Phone 8
-published: true
-author: nezumimc
-comments: true
 date: 2012-06-21 11:06:08
 tags:
-    - l
     - Windows Phone
 categories:
     - announcement
