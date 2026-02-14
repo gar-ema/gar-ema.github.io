@@ -13,7 +13,7 @@ author:
   email_md5: 082fcf499b13603f2d604b0afaf7f89d
 
 gravatar_hash:      "082fcf499b13603f2d604b0afaf7f89d"
-linkedin_url:       "http://bit.ly/2e8dXx8"
+linkedin_url:       "https://bit.ly/2e8dXx8"
 disqus:   ""
 #google_analytics:   not configured
 background:         "/assets/imgs/deserve_bg.jpg"
@@ -23,7 +23,8 @@ rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
 
-BASE_PATH: http://blog.unhandledexception.it/
+url: "https://blog.unhandledexception.it"
+BASE_PATH: https://blog.unhandledexception.it
 
 paginate:           10
 paginate_path:      "/page:num/"
