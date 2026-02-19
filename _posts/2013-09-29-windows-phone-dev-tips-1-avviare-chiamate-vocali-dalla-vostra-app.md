@@ -1,11 +1,8 @@
 ---
-layout: post
+hidden: true
 title: 'Windows Phone Dev Tips #1: Avviare chiamate vocali dalla vostra app'
-published: true
-author: emanueleg
-comments: true
 date: 2013-09-29 04:09:09
-tags: 
+tags:
     - windows phone
 categories:
     - programming

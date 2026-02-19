@@ -1,9 +1,6 @@
 ---
-layout: post
+hidden: true
 title: Except with linq
-published: true
-author: emanueleg
-comments: true
 date: 2009-10-09 21:10:13
 tags:
     - linq
@@ -13,7 +10,6 @@ categories:
     - programming
     - .net
 permalink: /2009/10/09/except-with-linq
-language: en
 ---
 
 <p>Alcune volte può capitare che abbiate bisogno di vedere quali elementi di una collezione non siano inclusi in un’altra collezione.&#160; (NOT IN)</p>

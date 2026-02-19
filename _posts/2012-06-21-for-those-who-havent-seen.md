@@ -1,9 +1,6 @@
 ---
-layout: post
-title: For those who haven’t seen
-published: true
-author: nezumimc
-comments: true
+hidden: true
+title: For those who haven't seen
 date: 2012-06-21 10:06:03
 tags:
     - surface

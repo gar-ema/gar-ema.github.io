@@ -1,9 +1,6 @@
 ---
-layout: post
+hidden: true
 title: Un anno da freelance - Retrospettiva
-published: true
-author: Emanuele
-comments: true
 date: 2018-07-27 11:25:13
 tags:
     - Retrospettiva

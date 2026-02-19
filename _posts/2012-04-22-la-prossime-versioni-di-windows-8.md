@@ -1,11 +1,8 @@
 ---
-layout: post
+hidden: true
 title: La prossime versioni di Windows 8…
-published: true
-author: nezumimc
-comments: true
 date: 2012-04-22 12:04:00
-tags: 
+tags:
     - Windows 8
 categories:
     - announcement

@@ -1,8 +1,7 @@
 ---
+hidden: true
 title: Voglio un EventSource tutto per me!!!
 date: 2010-05-12T06:56:38+00:00
-author: emanuele
-layout: post
 permalink: /2010/05/12/voglio-un-eventsource-tutto-per-me/
 categories:
   - Tech

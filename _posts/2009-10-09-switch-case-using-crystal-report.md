@@ -1,16 +1,12 @@
 ---
-layout: post
+hidden: true
 title: Switch case using Crystal Report
-published: true
-author: emanueleg
-comments: true
 date: 2009-10-09 11:25:13
 tags:
     - Crystal report
 categories:
     - programming
 permalink: /2009/10/09/switch-case-using-crystal-report
-language: en
 ---
 
 <p>Sometimes may occur that you need to use the construct SWITCH-CASE in a Formula Field.</p>

@@ -1,9 +1,6 @@
 ---
-layout: post
+hidden: true
 title: DevCamp un breve resoconto
-published: true
-author: nezumimc
-comments: true
 date: 2014-02-09 11:02:54
 tags:
     - Microsoft dev camp
