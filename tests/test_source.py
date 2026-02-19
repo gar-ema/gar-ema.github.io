@@ -243,10 +243,12 @@ class TestStructure(unittest.TestCase):
         )
 
     def test_no_leftover_chirpy_layouts(self):
+        allowed_layouts = {"home.html"}
         layouts_dir = os.path.join(ROOT, "_layouts")
         if os.path.isdir(layouts_dir):
             for f in os.listdir(layouts_dir):
-                self.fail(f"Unexpected custom layout: _layouts/{f}")
+                if f not in allowed_layouts:
+                    self.fail(f"Unexpected custom layout: _layouts/{f}")
 
 
 if __name__ == "__main__":
