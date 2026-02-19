@@ -53,7 +53,7 @@ l’invio di push notification segue un iter ben definito fatto di 6 passi (il s
   5. il WNS invia la notifica al Notification Client Platform che a seconda dei casi la gestisce
   6. La notifica viene gestita:
   1. Nel caso la nostra app sia in foreground e avessimo sottoscritto l’evento **PushNotificationReceived** questo verrebbe eseguito (con la stessa dinamica di un routed event) 
-  2. nel caso la nostra app non sia in esecuzione sar� il sistema operativo a gestire la notifica, che a fronte della tipologia produrr� degli effetti differenti 
+  2. nel caso la nostra app non sia in esecuzione sarà il sistema operativo a gestire la notifica, che a fronte della tipologia produrrà degli effetti differenti
 
 Durante questo iter noi, in quanto sviluppatori, possiamo intervenire solo in 4 punti:
 
