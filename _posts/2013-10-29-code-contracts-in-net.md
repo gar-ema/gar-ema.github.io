@@ -68,9 +68,6 @@ Come potete vedere abbiamo scritto le condizioni negando i controllo che facevam
 Ovviamente, essendo un tool a riga di comando, ccrewriter risulta scomodo da utilizzare nella vita di tutti i giorni. Per utilizzare in modo facile e soprattutto comodo i Code Contracts conviene installare un plug-in per Visual Studio, reperibile a >> [questo indirizzo](http://visualstudiogallery.msdn.microsoft.com/1ec7db13-3363-46c9-851f-1ce455f66970) <<. 
 Una volta installato, questo plug-in, aggiunge in VS all’interno delle proprietà dei progetti un nuovo tab chiamato Code Contracts 
 
-![]({{ site.url }}/assets/imgs/posts/codecontractsinnet01.png)
-{{site.url}}
-
 [![01[1\]](https://i0.wp.com/old.dotnetcampania.org/cfs-file.ashx/__key/CommunityServer.Blogs.Components.WeblogFiles/nezumi.metablogapi/8203.011_5F00_5E8FB0B9.png)](http://sdrv.ms/1euqJcr)
 
 Con queste impostazioni non dovrete specificare istruzioni di precompilazione, o utilizzare il tool, vi basterà modificare le impostazioni nel modo che vi è più congeniale.

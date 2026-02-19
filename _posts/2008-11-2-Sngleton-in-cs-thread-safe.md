@@ -11,7 +11,7 @@ tags:
 categories:
     - programming
     - .net
-permalink: /2009/11/02/except-with-linq
+permalink: /2008/11/02/singleton-in-cs-thread-safe
 ---
 
 <a target="_blank" href="{{ site.url }}/assets/imgs/posts/7444.singleton_78195B3B.jpg">
