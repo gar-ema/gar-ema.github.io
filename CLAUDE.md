@@ -1,4 +1,6 @@
-# CLAUDE.md — Context for AI Assistants
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## What is this repository?
 
@@ -57,6 +59,9 @@ bash script/test.sh
 # Solo test sorgenti (non richiede build)
 python3 -m pytest tests/test_source.py -v
 
+# Singolo test (usa -k per filtrare per nome)
+python3 -m pytest tests/test_source.py -v -k "test_has_theme"
+
 # Solo test build output (richiede build precedente)
 bundle exec jekyll build
 python3 -m pytest tests/test_build.py -v
@@ -86,3 +91,5 @@ Il workflow GitHub Actions (`.github/workflows/pages-deploy.yml`) si attiva su p
 - Non ci sono layout, SASS o JS custom — tutto viene dal tema remote Minimal Mistakes
 - Il `Gemfile.lock` è escluso dal versioning (presente in `.gitignore`)
 - La lingua principale del sito è italiano (`locale: it-IT`)
+- Il campo `repository` in `_config.yml` è richiesto dal plugin `jekyll-github-metadata` — senza di esso la CI fallisce con "No repo name found"
+- Il `Gemfile` include `faraday-retry` come dipendenza diretta (richiesta da `github-pages` gem)
