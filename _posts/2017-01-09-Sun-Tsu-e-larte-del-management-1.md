@@ -1,9 +1,6 @@
 ---
-layout: post
+hidden: true
 title: Sun-Tsu e l'arte del management &#35;1
-published: true
-author: emanueleg
-comments: true
 date: 2017-01-09 11:25:13
 tags:
     - Management

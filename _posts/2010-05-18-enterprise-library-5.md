@@ -1,16 +1,13 @@
 ---
-id: 50
+hidden: true
 title: Enterprise Library 5!!
 date: 2010-05-18T02:02:56+00:00
-author: Emanuele
-layout: post
 permalink: /2010/05/18/enterprise-library-5/
 categories:
   - announcement
 tags:
   - .net
   - enterprise library
-language: en
 ---
 Available to <a href="http://entlib.codeplex.com/" target="_blank">this address</a> the newest version of the Enterprise Library. Among the updates, the most interesting (imm&ho):
 

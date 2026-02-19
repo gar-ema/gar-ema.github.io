@@ -1,62 +1,113 @@
-title:               "Unhandled Exception"
-description:        "everyday a developer wakes up and starts coding"
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 
+minimal_mistakes_skin: "dark" # trigger rebuild
+
+locale: "it-IT"
+title: "Unhandled Exception"
+subtitle: "everyday a developer wakes up and starts coding"
+name: "Emanuele Garofalo"
+description: >-
+  Blog tecnico di Emanuele Garofalo.
+  Articoli su .NET, C#, architettura software e sviluppo.
+url: "https://blog.unhandledexception.it"
 
 author:
-  name: nezumi
-  #email: 
-  github: nezumi-quasar
-  twitter: emagar83
-  #pinterest: asd123
-  linkedin: emanuele-garofalo-ba12ab31
-  #bio: Your stylish, minimalist theme!
-  email_md5: 082fcf499b13603f2d604b0afaf7f89d
+  name: "Emanuele Garofalo"
+  bio: "Solution Architect & Technology Enthusiast"
+  location: "Italy"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/gar-ema"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/emagar83"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/emanuele-garofalo-ba12ab31"
 
-gravatar_hash:      "082fcf499b13603f2d604b0afaf7f89d"
-linkedin_url:       "https://bit.ly/2e8dXx8"
-disqus:   ""
-#google_analytics:   not configured
-background:         "/assets/imgs/deserve_bg.jpg"
-resources:          "resources"
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/gar-ema"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/emagar83"
 
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
+timezone: Europe/Rome
 
-url: "https://blog.unhandledexception.it"
-BASE_PATH: https://blog.unhandledexception.it
+# Build
+markdown: kramdown
+highlighter: rouge
 
-paginate:           10
-paginate_path:      "/page:num/"
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-highlighter:        rouge
-markdown:           kramdown
+# Pagination
+paginate: 10
+paginate_path: /page:num/
 
-nav:
-  - name:           "Slideshares"
-    href:           "/pages/slideshares"
-  - name:           "Bio"
-    href:           "/pages/bio"
-  - name:           "Publications"
-    href:           "/pages/publications"
+# Reading
+show_date: true
+date_format: "%d/%m/%Y"
+read_time: true
+words_per_minute: 200
 
-sass:
-  sass_dir: resources/css
-  style:    expanded
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 
+# Defaults
 defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
+  - scope:
+      path: ""
+      type: posts
     values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+      toc: true
+  - scope:
+      path: "_pages"
+      type: pages
     values:
-      layout:       "post"
+      layout: single
+      author_profile: true
 
+# Plugins
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Include
+include:
+  - _pages
+
+# Exclude
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - package*.json
+  - Gemfile
+  - Gemfile.lock
+  - tests
+  - script

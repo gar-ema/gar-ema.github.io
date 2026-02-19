@@ -1,13 +1,8 @@
 ---
-id: 71
+hidden: true
 title: Skype (Beta) per Windows Phone
 date: 2012-02-27T03:35:08+00:00
-author: Emanuele
-layout: post
-guid: https://nezwork.wordpress.com/?p=71
 permalink: /2012/02/27/skype-beta-per-windows-phone/
-geo_public:
-  - "0"
 categories:
   - announcement
 tags:
