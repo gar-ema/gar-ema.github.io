@@ -10,6 +10,7 @@ description: >-
   Blog tecnico di Emanuele Garofalo.
   Articoli su .NET, C#, architettura software e sviluppo.
 url: "https://blog.unhandledexception.it"
+baseurl: ""
 repository: "gar-ema/gar-ema.github.io"
 
 author:
