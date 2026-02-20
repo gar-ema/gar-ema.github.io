@@ -1,8 +1,6 @@
 name: "Build and Deploy"
 on:
   push:
-    branches:
-      - master
     paths-ignore:
       - .gitignore
       - README.md
@@ -53,6 +51,7 @@ jobs:
         run: python -m pytest tests/test_build.py -v
 
   deploy:
+    if: github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
