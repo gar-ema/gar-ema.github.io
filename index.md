@@ -1,10 +1,6 @@
 ---
 layout: single
 author_profile: true
-header:
-  overlay_color: "#1a1a2e"
-  overlay_filter: "0.5"
-  overlay_image: /assets/imgs/deserve_bg.jpg
 title: "Unhandled Exception"
 excerpt: "Solution Architect &amp; Community Speaker"
 ---
