@@ -15,6 +15,7 @@ timezone: Europe/Rome
 # Author sidebar
 author:
   name: "Emanuele Garofalo"
+  avatar: "/assets/imgs/avatar.png"
   bio: "Solution Architect · Community Speaker · DotNetCampania"
   location: "Italy"
   links:
