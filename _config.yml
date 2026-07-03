@@ -15,7 +15,7 @@ timezone: Europe/Rome
 # Author sidebar
 author:
   name: "Emanuele Garofalo"
-  bio: "Solution Architect | Community Speaker | DotNetCampania"
+  bio: "Solution Architect · Community Speaker · DotNetCampania"
   location: "Italy"
   links:
     - label: "GitHub"
