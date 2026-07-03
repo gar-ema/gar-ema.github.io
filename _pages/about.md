@@ -1,6 +1,7 @@
 ---
 title: "About"
 permalink: /about/
+author_profile: true
 ---
 
 Sono **Emanuele Garofalo**, Solution Architect e appassionato di tecnologia.
@@ -20,20 +21,3 @@ through technical events, speaker sessions, and editorial collaborations.
 
 I am a member of **DotNetCampania**, a community where I help organize technical events.
 I occasionally collaborate with **Apress** writing technical books.
-
----
-
-## Talks
-
-- **F24ZZ - DDD applicato**
-- **Universal Store Apps** - Mobile day by DotNetCampania
-- **Push Notifications** - Microsoft Dev Camp 2014
-- **Developing Appealing Application Using XAML**
-- **We Love Async** - UgiAltNet 2012
-
-## Links
-
-- [GitHub](https://github.com/gar-ema)
-- [Twitter](https://twitter.com/emagar83)
-- [LinkedIn](https://www.linkedin.com/in/emanuele-garofalo-ba12ab31)
-- [SlideShare](https://www.slideshare.net/emagar83)

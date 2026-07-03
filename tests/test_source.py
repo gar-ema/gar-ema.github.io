@@ -13,7 +13,6 @@ CONFIG_FILE = os.path.join(ROOT, "_config.yml")
 
 
 def _parse_front_matter(filepath):
-    """Extract YAML front matter from a file."""
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
     match = re.match(r"^---\n(.+?)\n---", content, re.DOTALL)
@@ -28,18 +27,10 @@ def _load_config():
 
 
 def _get_posts():
-    return sorted(
-        f for f in os.listdir(POSTS_DIR) if f.endswith(".md")
-    )
+    return sorted(f for f in os.listdir(POSTS_DIR) if f.endswith(".md"))
 
-
-# ---------------------------------------------------------------------------
-# Config tests
-# ---------------------------------------------------------------------------
 
 class TestConfig(unittest.TestCase):
-    """Validate _config.yml structure."""
-
     @classmethod
     def setUpClass(cls):
         cls.config = _load_config()
@@ -55,44 +46,41 @@ class TestConfig(unittest.TestCase):
         if "remote_theme" in self.config:
             self.assertIn("minimal-mistakes", self.config["remote_theme"])
 
+    def test_has_minimal_mistakes_skin(self):
+        self.assertIn("minimal_mistakes_skin", self.config,
+                      "Missing minimal_mistakes_skin in config")
+
     def test_has_required_fields(self):
-        for field in ["title", "description", "url", "author", "plugins"]:
+        for field in ["title", "description", "url", "plugins"]:
             self.assertIn(field, self.config, f"Missing field: {field}")
 
     def test_plugins_include_required(self):
         plugins = self.config["plugins"]
-        for p in ["jekyll-paginate", "jekyll-sitemap", "jekyll-feed",
-                   "jekyll-seo-tag"]:
+        for p in ["jekyll-remote-theme", "jekyll-feed"]:
             self.assertIn(p, plugins, f"Missing plugin: {p}")
 
-    def test_pagination_configured(self):
-        self.assertIn("paginate", self.config)
-        self.assertIsInstance(self.config["paginate"], int)
-        self.assertGreater(self.config["paginate"], 0)
-
     def test_includes_pages_directory(self):
-        """_pages dir must be in 'include' or Jekyll ignores it (causes 404)."""
         includes = self.config.get("include", [])
-        self.assertIn("_pages", includes,
-                      "Missing include: [_pages] – pages will 404")
+        self.assertIn("_pages", includes, "Missing include: [_pages]")
 
     def test_defaults_set_layout(self):
         defaults = self.config.get("defaults", [])
-        post_defaults = [
-            d for d in defaults
-            if d.get("scope", {}).get("type") == "posts"
-        ]
+        post_defaults = [d for d in defaults if d.get("scope", {}).get("type") == "posts"]
         self.assertTrue(len(post_defaults) > 0, "No defaults for posts")
         self.assertIn("layout", post_defaults[0]["values"])
+        allowed_layouts = {"single", "post"}
+        actual_layout = post_defaults[0]["values"]["layout"]
+        self.assertIn(actual_layout, allowed_layouts,
+                      f"Posts default layout should be 'single' or 'post', got '{actual_layout}'")
 
+    def test_author_configured(self):
+        self.assertIn("author", self.config, "Missing 'author' block in config")
+        author = self.config["author"]
+        self.assertIn("name", author, "Missing author.name")
+        self.assertIn("bio", author, "Missing author.bio")
 
-# ---------------------------------------------------------------------------
-# Post front matter tests
-# ---------------------------------------------------------------------------
 
 class TestPostFrontMatter(unittest.TestCase):
-    """Validate that all posts have correct front matter."""
-
     @classmethod
     def setUpClass(cls):
         cls.posts = _get_posts()
@@ -118,13 +106,9 @@ class TestPostFrontMatter(unittest.TestCase):
             self.assertIn("date", fm, f"{post}: missing date")
 
     def test_all_posts_have_hidden_true(self):
-        """All current posts should be hidden (archived). New posts should
-        NOT have hidden: true, so update this test when adding new content."""
         for post, fm in self.front_matters.items():
-            self.assertTrue(
-                fm.get("hidden", False),
-                f"{post}: expected hidden: true for archived post"
-            )
+            self.assertTrue(fm.get("hidden", False),
+                            f"{post}: expected hidden: true for archived post")
 
     def test_post_filenames_match_date_format(self):
         pattern = re.compile(r"^\d{4}-\d{1,2}-\d{1,2}-.+\.md$")
@@ -136,26 +120,16 @@ class TestPostFrontMatter(unittest.TestCase):
         for post, fm in self.front_matters.items():
             link = fm.get("permalink")
             if link:
-                self.assertNotIn(
-                    link, permalinks,
-                    f"Duplicate permalink '{link}' in {post} and {permalinks.get(link)}"
-                )
+                self.assertNotIn(link, permalinks,
+                                 f"Duplicate permalink '{link}' in {post} and {permalinks.get(link)}")
                 permalinks[link] = post
 
 
-# ---------------------------------------------------------------------------
-# Pages tests
-# ---------------------------------------------------------------------------
-
 class TestPages(unittest.TestCase):
-    """Validate that all expected pages exist."""
-
     EXPECTED_PAGES = {
         "about.md": "/about/",
-        "archive.md": "/archives/",
-        "categories.md": "/categories/",
-        "tags.md": "/tags/",
         "old-articles.md": "/old-articles/",
+        "talks.md": "/talks/",
     }
 
     def test_all_expected_pages_exist(self):
@@ -167,58 +141,82 @@ class TestPages(unittest.TestCase):
         for page, expected_link in self.EXPECTED_PAGES.items():
             fm = _parse_front_matter(os.path.join(PAGES_DIR, page))
             self.assertIsNotNone(fm, f"{page}: missing front matter")
-            self.assertEqual(
-                fm.get("permalink"), expected_link,
-                f"{page}: expected permalink {expected_link}"
-            )
+            self.assertEqual(fm.get("permalink"), expected_link,
+                             f"{page}: expected permalink {expected_link}")
 
 
-# ---------------------------------------------------------------------------
-# Navigation tests
-# ---------------------------------------------------------------------------
+class TestTalksData(unittest.TestCase):
+    TALKS_FILE = os.path.join(DATA_DIR, "talks.yml")
+
+    def _load_talks(self):
+        with open(self.TALKS_FILE, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f.read())
+
+    def test_talks_file_exists(self):
+        self.assertTrue(os.path.isfile(self.TALKS_FILE), "_data/talks.yml missing")
+
+    def test_talks_has_entries(self):
+        talks = self._load_talks()
+        self.assertIsInstance(talks, list, "talks.yml must be a list")
+        self.assertGreater(len(talks), 0, "talks.yml has no entries")
+
+    def test_talks_entries_have_required_fields(self):
+        talks = self._load_talks()
+        for talk in talks:
+            self.assertIn("title", talk, f"Talk missing 'title': {talk}")
+            self.assertIn("event", talk, f"Talk missing 'event': {talk}")
+
 
 class TestNavigation(unittest.TestCase):
-    """Validate navigation.yml links correspond to actual pages."""
+    NAV_FILE = os.path.join(DATA_DIR, "navigation.yml")
+
+    def _load_nav(self):
+        with open(self.NAV_FILE, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f.read())
 
     def test_navigation_file_exists(self):
-        path = os.path.join(DATA_DIR, "navigation.yml")
-        self.assertTrue(os.path.isfile(path))
+        self.assertTrue(os.path.isfile(self.NAV_FILE), "_data/navigation.yml missing")
 
-    def test_navigation_links_have_matching_pages(self):
-        with open(os.path.join(DATA_DIR, "navigation.yml"), "r") as f:
-            nav = yaml.safe_load(f.read())
+    def test_navigation_has_main_list(self):
+        nav = self._load_nav()
+        self.assertIn("main", nav, "navigation.yml missing 'main' key (Minimal Mistakes format)")
+        self.assertIsInstance(nav["main"], list)
+        self.assertGreater(len(nav["main"]), 0)
 
+    def test_navigation_url_links_have_matching_pages(self):
+        nav = self._load_nav()
+        nav_items = nav.get("main", [])
         page_permalinks = set()
         for page_file in os.listdir(PAGES_DIR):
             if page_file.endswith(".md"):
                 fm = _parse_front_matter(os.path.join(PAGES_DIR, page_file))
                 if fm and "permalink" in fm:
                     page_permalinks.add(fm["permalink"])
+        for item in nav_items:
+            url = item.get("url")
+            if url and not url.startswith("http"):
+                normalized = "/" + url.lstrip("/")
+                if not normalized.endswith("/"):
+                    normalized += "/"
+                self.assertIn(normalized, page_permalinks,
+                              f"Nav link '{item.get('title')}' -> '{url}' has no matching page")
 
-        for item in nav.get("main", []):
-            self.assertIn(
-                item["url"], page_permalinks,
-                f"Nav link '{item['title']}' -> '{item['url']}' has no matching page"
-            )
+    def test_navigation_has_old_articles_entry(self):
+        nav = self._load_nav()
+        urls = [item.get("url", "") for item in nav.get("main", [])]
+        self.assertTrue(any("/old-articles" in u for u in urls),
+                        "Navigation missing entry for /old-articles/")
 
-    def test_navigation_has_required_entries(self):
-        with open(os.path.join(DATA_DIR, "navigation.yml"), "r") as f:
-            nav = yaml.safe_load(f.read())
+    def test_navigation_has_talks_entry(self):
+        nav = self._load_nav()
+        urls = [item.get("url", "") for item in nav.get("main", [])]
+        self.assertTrue(any("/talks" in u for u in urls),
+                        "Navigation missing entry for /talks/")
 
-        urls = [item["url"] for item in nav.get("main", [])]
-        for required in ["/categories/", "/tags/", "/about/", "/old-articles/"]:
-            self.assertIn(required, urls, f"Missing nav entry for {required}")
-
-
-# ---------------------------------------------------------------------------
-# Structural tests
-# ---------------------------------------------------------------------------
 
 class TestStructure(unittest.TestCase):
-    """Validate project structure."""
-
-    def test_index_html_exists(self):
-        self.assertTrue(os.path.isfile(os.path.join(ROOT, "index.html")))
+    def test_index_exists(self):
+        self.assertTrue(os.path.isfile(os.path.join(ROOT, "index.md")), "index.md not found")
 
     def test_cname_exists(self):
         self.assertTrue(os.path.isfile(os.path.join(ROOT, "CNAME")))
@@ -230,25 +228,34 @@ class TestStructure(unittest.TestCase):
     def test_gemfile_exists(self):
         self.assertTrue(os.path.isfile(os.path.join(ROOT, "Gemfile")))
 
+    def test_gemfile_has_include_cache(self):
+        with open(os.path.join(ROOT, "Gemfile"), "r") as f:
+            content = f.read()
+        self.assertIn("jekyll-include-cache", content,
+                      "Gemfile missing jekyll-include-cache — required by Minimal Mistakes")
+
     def test_no_chirpy_references_in_config(self):
         with open(CONFIG_FILE, "r") as f:
             content = f.read()
-        self.assertNotIn("chirpy", content.lower(),
-                         "_config.yml still references Chirpy theme")
+        self.assertNotIn("chirpy", content.lower(), "_config.yml still references Chirpy theme")
 
     def test_no_leftover_tabs_directory(self):
-        self.assertFalse(
-            os.path.isdir(os.path.join(ROOT, "_tabs")),
-            "_tabs/ directory should not exist after migration"
-        )
+        self.assertFalse(os.path.isdir(os.path.join(ROOT, "_tabs")),
+                         "_tabs/ directory should not exist after migration")
 
     def test_no_leftover_chirpy_layouts(self):
-        allowed_layouts = {"home.html"}
         layouts_dir = os.path.join(ROOT, "_layouts")
         if os.path.isdir(layouts_dir):
             for f in os.listdir(layouts_dir):
-                if f not in allowed_layouts:
-                    self.fail(f"Unexpected custom layout: _layouts/{f}")
+                self.fail(f"Unexpected custom layout: _layouts/{f}")
+
+    def test_no_agency_sitetext(self):
+        self.assertFalse(os.path.isfile(os.path.join(DATA_DIR, "sitetext.yml")),
+                         "_data/sitetext.yml should not exist — Agency theme leftover")
+
+    def test_no_agency_style(self):
+        self.assertFalse(os.path.isfile(os.path.join(DATA_DIR, "style.yml")),
+                         "_data/style.yml should not exist — Agency theme leftover")
 
 
 if __name__ == "__main__":
