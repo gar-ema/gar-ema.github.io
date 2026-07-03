@@ -1,0 +1,8 @@
+{% assign talks = include.talks %}
+{% if talks and talks.size > 0 %}
+{% for talk in talks %}
+{% include event-card.html talk=talk %}
+{% endfor %}
+{% elsif include.empty_text %}
+_{{ include.empty_text }}_
+{% endif %}

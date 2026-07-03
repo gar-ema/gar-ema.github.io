@@ -1,99 +1,73 @@
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "dark"
 
-minimal_mistakes_skin: "dark" # trigger rebuild
-
-locale: "it-IT"
 title: "Unhandled Exception"
-subtitle: "everyday a developer wakes up and starts coding"
-name: "Emanuele Garofalo"
+subtitle: "Emanuele Garofalo — Solution Architect"
 description: >-
-  Blog tecnico di Emanuele Garofalo.
-  Articoli su .NET, C#, architettura software e sviluppo.
+  Profilo community di Emanuele Garofalo — Solution Architect.
+  Talks, presentazioni e articoli tecnici su .NET, C# e architettura software.
 url: "https://blog.unhandledexception.it"
 baseurl: ""
-repository: "gar-ema/gar-ema.github.io"
 
+locale: "it-IT"
+timezone: Europe/Rome
+
+# Author sidebar
 author:
   name: "Emanuele Garofalo"
-  bio: "Solution Architect & Technology Enthusiast"
+  bio: "Solution Architect | Community Speaker | DotNetCampania"
   location: "Italy"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/gar-ema"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/emagar83"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/emanuele-garofalo-ba12ab31"
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/gar-ema"
+      url: "https://www.linkedin.com/in/emanuelegarofalo/"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/emagar83"
-
-timezone: Europe/Rome
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/gar_ema"
 
 # Build
 markdown: kramdown
 highlighter: rouge
 
+# Sass — silence deprecation warnings from Minimal Mistakes v4 / vendor SCSS
+# (susy, breakpoint, @import — would require a full upstream rewrite to fix)
+sass:
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+    - if-function
+    - slash-div
+
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-
-# Pagination
-paginate: 10
-paginate_path: /page:num/
-
-# Reading
-show_date: true
-date_format: "%d/%m/%Y"
-read_time: true
-words_per_minute: 200
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
 # Defaults
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      layout: single
+      layout: "single"
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      show_date: true
-      toc: true
+      read_time: false
+      comments: false
   - scope:
       path: "_pages"
-      type: pages
+      type: "pages"
     values:
-      layout: single
+      layout: "single"
       author_profile: true
 
 # Plugins
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
 
 # Include
 include:
@@ -112,6 +86,5 @@ exclude:
   - package*.json
   - Gemfile
   - Gemfile.lock
-  - tests
-  - script
-  - vendor
+  - script/
+  - tests/

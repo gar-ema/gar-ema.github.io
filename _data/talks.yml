@@ -1,0 +1,29 @@
+# Talks & eventi (come speaker, organizzatore o semplice supporto)
+# Ordina le voci dalla più recente alla più vecchia.
+# Per aggiungere un talk: copia il blocco seguente e compila i campi.
+# Lascia vuoto (valore nullo) i campi non ancora disponibili.
+# Campi disponibili:
+#   title       : titolo della sessione (obbligatorio)
+#   event       : nome dell'evento o conferenza (obbligatorio)
+#   date        : data in formato YYYY-MM-DD (opzionale, vuoto = "prossimo evento")
+#   description : breve descrizione del contenuto (opzionale)
+#   event_url   : URL alla homepage dell'evento
+#   slides_url  : URL alle slide (es. Speaker Deck, SlideShare, PDF)
+#   demo_url    : URL al repository con il codice demo del talk
+
+
+- title: "Ai ai ai, hai provato a fare tutto con l'AI?"
+  event: "TabIA Conf 2026 — Tech Day"
+  date: "2026-05-29"
+  description: >
+    Hai provato il vibe coding: prompt, codice generato, tutto magico per venti minuti.
+    Poi il progetto cresce, il contesto si perde, e ti ritrovi a non capire più il codice
+    che l'AI ha scritto per te. In questo talk ripercorro l'evoluzione dello sviluppo
+    software con l'AI: dal vibe coding allo spec-driven (specifica prima, codice dopo),
+    fino a una valutazione onesta delle metodologie più recenti (TDD assistito da AI,
+    sistemi multi-agente, loop di auto-revisione). Capire la differenza ci aiuta a
+    orientarci sulla mappa di un territorio in continuo mutamento, sfatare i miti del
+    nostro tempo ed essere pronti a trarne il meglio.
+  event_url: "https://tabiaconf.it/#programma"
+  slides_url:
+  demo_url:

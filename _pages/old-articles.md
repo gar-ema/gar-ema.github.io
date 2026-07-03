@@ -1,7 +1,10 @@
 ---
-title: "Old Articles"
+title: "Blog"
 permalink: /old-articles/
+author_profile: true
 ---
+
+Articoli tecnici scritti nel corso degli anni, principalmente su .NET, C# e architettura software.
 
 {% assign posts_by_year = site.posts | where: "hidden", true | group_by_exp: "post", "post.date | date: '%Y'" %}
 

@@ -1,0 +1,12 @@
+{% assign talk = include.talk %}
+#### {{ talk.title }}
+
+**{{ talk.event }}** &middot; {% if talk.date %}{{ talk.date | date: "%d/%m/%Y" }}{% else %}data da definire{% endif %}
+
+{{ talk.description }}
+
+{% if talk.event_url %}[Sito evento]({{ talk.event_url }}){: .btn .btn--primary }{% endif %}
+{% if talk.slides_url %}[Slide]({{ talk.slides_url }}){: .btn .btn--inverse }{% endif %}
+{% if talk.demo_url %}[Repo demo]({{ talk.demo_url }}){: .btn .btn--inverse }{% endif %}
+
+---
