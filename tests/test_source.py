@@ -106,9 +106,13 @@ class TestPostFrontMatter(unittest.TestCase):
             self.assertIn("date", fm, f"{post}: missing date")
 
     def test_all_posts_have_hidden_true(self):
+        # Legacy posts migrated from Chirpy (up to 2018) must stay archived/hidden;
+        # newer posts may be published as visible announcements.
+        LEGACY_CUTOFF_YEAR = 2019
         for post, fm in self.front_matters.items():
-            self.assertTrue(fm.get("hidden", False),
-                            f"{post}: expected hidden: true for archived post")
+            if int(post[:4]) < LEGACY_CUTOFF_YEAR:
+                self.assertTrue(fm.get("hidden", False),
+                                f"{post}: expected hidden: true for archived post")
 
     def test_post_filenames_match_date_format(self):
         pattern = re.compile(r"^\d{4}-\d{1,2}-\d{1,2}-.+\.md$")
