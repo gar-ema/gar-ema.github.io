@@ -8,9 +8,28 @@
 #   date        : data in formato YYYY-MM-DD (opzionale, vuoto = "prossimo evento")
 #   description : breve descrizione del contenuto (opzionale)
 #   event_url   : URL alla homepage dell'evento
+#   talk_url    : URL diretto alla sessione/agenda del talk
 #   slides_url  : URL alle slide (es. Speaker Deck, SlideShare, PDF)
 #   demo_url    : URL al repository con il codice demo del talk
 
+
+- title: "Quanto costa un token? FinOps per l'AI in produzione"
+  event: "1nn0vAI 2026"
+  date: "2026-09-26"
+  description: >
+    Il POC costa poco, poi si arriva in produzione e il conto dell'AI diventa la
+    voce che nessuno sa spiegare. Il motivo quasi sempre è uno: i token. Prompt
+    gonfi, contesto che cresce, RAG che recupera troppo, agenti che ciclano,
+    output prolissi, retry. Ogni chiamata è un costo, e a fine mese la somma è
+    una sorpresa. FinOps entra fin dentro l'AI generativa partendo dall'unità che
+    conta davvero, il token. Vediamo dove si bruciano i token, come misurare il
+    costo per richiesta e soprattutto per risultato utile, e quali leve lo
+    spostano. Gli esempi saranno vendor-neutral, varranno con OpenAI, Anthropic o
+    altri e, anche se calati su Microsoft Foundry, saranno comodi anche al di fuori.
+  event_url: "https://1nn0vai2026.1nn0va.it/"
+  talk_url: "https://1nn0vai2026.1nn0va.it/#schedule"
+  slides_url: "/talks/1nn0vai-2026/2026-09-26-1nn0vAI-quanto-costa-un-token-v7.pdf"
+  demo_url:
 
 - title: "Ai ai ai, hai provato a fare tutto con l'AI?"
   event: "TabIA Conf 2026 — Tech Day"
@@ -25,5 +44,158 @@
     orientarci sulla mappa di un territorio in continuo mutamento, sfatare i miti del
     nostro tempo ed essere pronti a trarne il meglio.
   event_url: "https://tabiaconf.it/#programma"
+  slides_url:
+  demo_url:
+
+- title: "Intro al Cost Management su Azure col Well-Architected Framework"
+  event: "Global Azure 2026 Pordenone"
+  date: "2026-04-18"
+  description: >
+    Capita a tutti di aprire il portale Azure e trovare i costi del mese diversi
+    dalle previsioni. Partiamo dai fondamentali del Cost Optimization Pillar del
+    Well-Architected Framework, senza dare nulla per scontato, e vediamo insieme
+    gli strumenti Azure pensati per chi inizia (Cost Management, Advisor e query
+    per individuare risorse sottoutilizzate). Il cloud costa, oppure ottimizzandolo
+    diventa competitivo rispetto al TCO? Scopriamolo insieme.
+  event_url: "https://globalazure2026pn.1nn0va.it/"
+  talk_url: "https://globalazure2026pn.1nn0va.it/#schedule"
+  slides_url:
+  demo_url:
+
+- title: "Copilot, mostrami anomalie nei costi delle risorse"
+  event: "1nn0vAI 2025"
+  date: "2025-09-27"
+  description: >
+    Il vostro FinOps Practitioner vi ha aiutati a mettere in piedi gli strumenti
+    per raccogliere dati su consumi e metriche di utilizzo delle risorse e scoprire
+    come ottimizzare i costi del cloud. E se invece di imparare una nuova sintassi
+    per interrogare quei dati parlassimo con Copilot? Vediamo un uso concreto di
+    FinOps Hubs che, tramite Azure MCP server, si integra con GitHub Copilot per
+    chiedere all'AI come ottimizzare i costi di tutto l'ambiente cloud; e grazie a
+    FOCUS non ci limiteremo a un solo cloud provider.
+  event_url: "https://1nn0vai2025.1nn0va.it/"
+  talk_url: "https://1nn0vai2025.1nn0va.it/#schedule"
+  slides_url:
+  demo_url:
+
+- title: "Azure Load Balancers demistified"
+  event: "Infrastructure as a Saturday 2025"
+  date: "2025-04-12"
+  description: >
+    In Azure sotto la categoria Load balancers ricadono diversi servizi. In questa
+    sessione discutiamo le principali differenze tra Load Balancer, Application
+    Gateway, Front Door e Traffic Manager, identificando per ognuno l'opportuno
+    caso d'uso rispetto alle funzionalità messe a disposizione. Infine vediamo
+    praticamente come implementare e gestire questi servizi in scenari reali,
+    evidenziando l'efficacia di Azure nell'instradare il traffico in ingresso.
+  event_url: "https://iaasat2025pn.1nn0va.it/"
+  talk_url: "https://iaasat2025pn.1nn0va.it/#schedule"
+  slides_url:
+  demo_url:
+
+
+
+
+- title: "#4Dev 2025"
+  event: "Roma, Italia"
+  date: "2025-10-01"
+  event_url: "https://sharp4dev.sharpcoding.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "Azure Day Roma 2025"
+  event: "Roma, Italia"
+  date: "2025-06-01"
+  event_url: "http://www.azureday.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "Global Azure Milano 2025"
+  event: "Milano, Italia"
+  date: "2025-05-01"
+  event_url: "https://www.azuremeetupmilano.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "Global Azure 2025 Pordenone"
+  event: "Pordenone, Italia"
+  date: "2025-05-01"
+  event_url: "https://globalazure2025pn.eventbrite.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "1nn0va Saturday 2024"
+  event: "Pordenone, Italia"
+  date: "2024-09-01"
+  event_url: "https://1nn0vasat2024.eventbrite.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "Azure Day Roma 2024"
+  event: "Roma, Italia"
+  date: "2024-06-01"
+  event_url: "http://www.azureday.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "XmasDev 2023"
+  event: "Roma, Italia"
+  date: "2023-12-01"
+  event_url: "http://www.xmasdev.net/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "DevOpsHeroes 2023"
+  event: "Parma, Italia"
+  date: "2023-10-01"
+  event_url:
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "Azure Day Roma 2023"
+  event: "Roma, Italia"
+  date: "2023-06-01"
+  event_url: "http://www.azureday.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "XmasDev 2022"
+  event: "Roma, Italia"
+  date: "2022-12-01"
+  event_url: "http://www.xmasdev.net/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "Cloud Day 2022"
+  event: "Milano, Italia"
+  date: "2022-10-01"
+  event_url: "https://www.cloudday.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "DevOpsHeroes 2022"
+  event: "Parma, Italia"
+  date: "2022-10-01"
+  event_url: "https://www.linkedin.com/events/devopsheroesparma20226933040399229853696/about/"
+  talk_url:
+  slides_url:
+  demo_url:
+
+- title: "WPC 2022"
+  event: "Assago, Italia"
+  date: "2022-10-01"
+  event_url: "https://www.wpc2022.it/"
+  talk_url:
   slides_url:
   demo_url:
