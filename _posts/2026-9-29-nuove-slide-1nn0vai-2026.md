@@ -1,5 +1,4 @@
 ---
-hidden: true
 title: Ho pubblicato le nuove slide di 1nn0vAI 2026
 date: 2026-09-29 10:00:00
 tags:
