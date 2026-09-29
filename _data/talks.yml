@@ -13,6 +13,23 @@
 #   demo_url    : URL al repository con il codice demo del talk
 
 
+- title: "APIOps in azione: aggiungiamo agilità e governance alle tue API su Azure"
+  event: "#4Dev 2026"
+  date: "2026-10-16"
+  description: >
+    Le API sono il cuore pulsante dei nostri ecosistemi digitali. In questa
+    sessione esploreremo come l'approccio APIOps possa trasformare la gestione
+    delle API quando vengono deployate su Azure. Discuteremo di come APIOps riduca
+    i rischi operativi e acceleri il rilascio delle API, garantendo al contempo
+    conformità tra gli ambienti e tracciabilità. Approfondiremo come questo
+    modello favorisca una cultura di collaborazione tra team, promuovendo
+    l'autonomia operativa e il rispetto degli standard di qualità in tutti gli
+    ambienti.
+  event_url: "https://sharp4dev.sharpcoding.it/"
+  talk_url:
+  slides_url:
+  demo_url:
+
 - title: "Quanto costa un token? FinOps per l'AI in produzione"
   event: "1nn0vAI 2026"
   date: "2026-09-26"
